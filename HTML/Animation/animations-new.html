@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>different Animations</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        table.main {
+            width: 100%;
+        }
+
+
+        th,
+        td {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border: 1px groove #000;
+            text-align: center;
+        }
+
+        tbody td {
+            height: 300px;
+            font-size: 24px;
+            font-weight: 600;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-transform: capitalize;
+        }
+
+        tbody td.height-less {
+            height: 100px !important;
+        }
+
+        tbody td.car-td {
+            height: auto !important;
+        }
+
+        div.circle {
+            position: relative;
+            height: 100px;
+            width: 100px;
+            background-color: #ff0000;
+            border-radius: 100%;
+            margin: auto;
+        }
+
+        .bounce-down {
+            top: -100px;
+            animation: bounce 0.5s ease-in infinite alternate;
+        }
+
+        .bounce-up {
+            top: -100px;
+            animation: bounce 0.5s ease-out infinite alternate;
+        }
+
+        .sliding {
+            animation: slide 0.5s ease infinite alternate;
+        }
+
+        img#car.ease {
+            animation: drive 5s ease infinite alternate;
+            position: relative;
+            margin: auto;
+        }
+
+        img#car.ease-in {
+            animation: drive 5s ease-in infinite alternate;
+            position: relative;
+            margin: auto;
+        }
+
+        img#car.ease-out {
+            animation: drive 5s ease-out infinite alternate;
+            position: relative;
+            margin: auto;
+        }
+
+        img#car.ease-in-out {
+            animation: drive 5s ease-in-out infinite alternate;
+            position: relative;
+            margin: auto;
+        }
+
+        img#car.linear {
+            animation: drive 5s linear infinite alternate;
+            position: relative;
+            margin: auto;
+        }
+
+        img#car.step-start {
+            animation: drive 5s step-start infinite alternate;
+            position: relative;
+            margin: auto;
+        }
+
+        img#car.step-end {
+            animation: drive 5s step-end infinite alternate;
+            position: relative;
+            margin: auto;
+        }
+
+        img#car.steps-1 {
+            animation: drive 5s steps(0.5) infinite alternate;
+            position: relative;
+            margin: auto;
+        }
+
+        @keyframes drive {
+            0% {
+                left: 100px;
+            }
+
+            100% {
+                left: -100px;
+            }
+
+        }
+
+        @keyframes slide {
+            0% {
+                left: -100px;
+            }
+
+            100% {
+                left: 100px;
+            }
+
+        }
+
+        @keyframes bounce {
+            0% {
+                top: -100px;
+            }
+
+            100% {
+                top: 100px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <table class="main">
+        <thead>
+            <tr>
+                <th>
+                    Animation Name
+                </th>
+                <th>
+                    Animation
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="car-td">ease</td>
+                <td class="car-td">
+                    <img id="car" class="ease" src="../../static/car.webp" alt="" width="64px">
+
+                </td>
+            </tr>
+            <tr>
+                <td class="car-td">ease-in</td>
+                <td class="car-td">
+                    <img id="car" class="ease-in" src="../../static/car.webp" alt="" width="64px">
+
+                </td>
+            </tr>
+            <tr>
+                <td class="car-td">ease-out</td>
+                <td class="car-td">
+                    <img id="car" class="ease-out" src="../../static/car.webp" alt="" width="64px">
+
+                </td>
+            </tr>
+            <tr>
+                <td class="car-td">ease-in-out</td>
+                <td class="car-td">
+                    <img id="car" class="ease-in-out" src="../../static/car.webp" alt="" width="64px">
+
+                </td>
+            </tr>
+            <tr>
+                <td class="car-td">linear</td>
+                <td class="car-td">
+                    <img id="car" class="linear" src="../../static/car.webp" alt="" width="64px">
+
+                </td>
+            </tr>
+            <tr>
+                <td class="car-td">step-start</td>
+                <td class="car-td">
+                    <img id="car" class="step-start" src="../../static/car.webp" alt="" width="64px">
+
+                </td>
+            </tr>
+            <tr>
+                <td class="car-td">step-end</td>
+                <td class="car-td">
+                    <img id="car" class="step-end" src="../../static/car.webp" alt="" width="64px">
+
+                </td>
+            </tr>
+            <tr>
+                <td class="car-td">steps-0.5</td>
+                <td class="car-td">
+                    <img id="car" class="steps-1" src="../../static/car.webp" alt="" width="64px">
+
+                </td>
+            </tr>
+            <tr>
+                <td>bounce Down</td>
+                <td>
+                    <div class="circle bounce-down"></div>
+                </td>
+            </tr>
+            <tr>
+                <td>bounce Up</td>
+                <td>
+                    <div class="circle bounce-up"></div>
+                </td>
+            </tr>
+            <tr>
+                <td class="height-less">sliding</td>
+                <td class="height-less">
+                    <div class="circle sliding"></div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>

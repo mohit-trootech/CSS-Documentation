@@ -1,0 +1,270 @@
+// 1) Universal selector
+.universal-selector * {
+    color: black
+}
+
+// 2) ID selector
+#id-selector {
+    color: black
+}
+
+// 3) Class selector
+.class-selector {
+    color: black
+}
+
+// 4) Context selector
+.context-selector li a {
+    color: black
+}
+
+.context-selector ol li {
+    color: black;
+}
+
+// 5) Tag selector
+.tag-selector a {
+    color: black
+}
+
+// 6) Link selectors
+.link-selectors a:link {
+    color: black;
+}
+
+.link-selectors a:visited {
+    color: black;
+}
+
+// 7) Neighbour selector
+.neighbour-selector {
+    li:first-of-type+li {
+        color: black
+    }
+
+    ol+li {
+        color: black;
+    }
+
+    li+ol {
+        color: black;
+    }
+}
+
+// 8) Direct descendant selector
+.direct-descendant-selector>li {
+    color: black
+}
+
+// 9) Neighbours selector
+.neighbours-selector .from~li {
+    color: black
+}
+
+// 10) Attribute selector
+.attribute-selector {
+    a[title] {
+        color: black
+    }
+
+    a[href] {
+        color: black;
+    }
+}
+
+// 11) Attribute value selector
+.attribute-value-selector a[href="#"] {
+    color: black
+}
+
+// 12) Attribute contains value selector
+.attribute-contains-value-selector a[href*=".com"] {
+    color: black
+}
+
+// 13) Attribute starts with value selector
+.attribute-starts-with-value-selector a[href^="https://"] {
+    color: black
+}
+
+// 14) Attribute ends with value selector
+.attribute-ends-with-value-selector a[href$=".jpg"] {
+    color: black
+}
+
+.attribute-ends-with-value-selector a[href$=".png"] {
+    color: black
+}
+
+// 15) Data type selector
+.data-type-selector a[data-filetype="image"] {
+    color: black
+}
+
+// 16) Data type split selector
+.data-type-split-selector {
+    a[data-class~="red"] {
+        color: black
+    }
+
+    a[data-class~="green"] {
+        color: black;
+    }
+
+    a[data-class~="blue"] {
+        color: black;
+    }
+
+    a[data-class~="bold"] {
+        font-weight: bold;
+    }
+
+    a[data-class~="underline"] {
+        text-decoration: underline;
+    }
+}
+
+// 17) X:checked
+.input-check-selector {
+
+    input[type="checkbox"],
+    input[type="radio"] {
+        &:checked {
+            width: 13px;
+            height: 13px;
+        }
+    }
+}
+
+// 18) X:after and X:before
+.pseudoclass-selector li {
+
+    &::before,
+    &::after {
+        content: "";
+        color: black;
+    }
+
+    &::before {
+        color: black;
+    }
+
+    &::after {
+        color: black;
+    }
+}
+
+// 19) X:hover
+.hover-selector a {
+    color: black;
+
+    &:hover {
+        color: black
+    }
+}
+
+// 20) X:not(selector)
+.not-selector a:not([href="https://github.com/topics/js"]) {
+    color: black
+}
+
+// 21) X::first-line and X::first-letter
+.pseudoelement-selector li::first-line {
+    color: black;
+}
+
+.pseudoelement-selector li::first-letter {
+    color: black
+}
+
+// 22) X:nth-child(n)
+.nth-child-selector li:nth-child(2n + 1) {
+    color: black
+}
+
+.nth-child-selector li:nth-child(2n) {
+    color: black;
+}
+
+.nth-child-selector>li:nth-child(2n) {
+    color: black;
+}
+
+.nth-child-selector>li:nth-child(2n + 1) {
+    color: black;
+}
+
+// 23) X:nth-last-child(n)
+.nth-last-child-selector li:nth-last-child(1) {
+    color: black
+}
+
+.nth-last-child-selector li:nth-last-child(2) {
+    color: black;
+}
+
+// 24) X:nth-of-type(n)
+.nth-of-type-selector li:nth-of-type(2) {
+    color: black
+}
+
+.nth-of-type-selector ol:nth-of-type(2) li:nth-of-type(1) {
+    color: black;
+}
+
+// 25) X:nth-last-of-type(n)
+.nth-last-of-type-selector li:nth-last-of-type(2) {
+    color: black
+}
+
+.nth-last-of-type-selector ol:nth-last-of-type(2) li:nth-last-of-type(1) {
+    color: black;
+}
+
+.nth-last-of-type-selector li:nth-last-of-type(3) {
+    color: black;
+}
+
+// 26) X:first-child
+.first-child-selector li:first-child {
+    color: black
+}
+
+.first-child-selector>ol li:first-child {
+    color: black;
+}
+
+// 27) X:last-child
+.last-child-selector li:last-child {
+    color: black
+}
+
+.last-child-selector>ol li:last-child {
+    color: black;
+
+}
+
+// 28) X:only-child
+.only-child-selector li:only-child {
+    color: black
+}
+
+// 29) X:only-of-type
+.only-of-type-selector li:only-of-type {
+    color: black
+}
+
+.only-of-type-selector ol li:only-of-type {
+    color: black;
+
+}
+
+// 30) X:first-of-type
+.first-of-type-selector li:first-of-type {
+    color: black
+}
+
+.first-of-type-selector ol li:first-of-type {
+    color: black;
+
+}

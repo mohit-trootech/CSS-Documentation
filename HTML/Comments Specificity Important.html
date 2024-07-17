@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comments Specificity Important</title>
+    <style>
+        /* Internal CSS Example */
+        button {
+            background: #466060;
+            padding: 10px 20px;
+            border: none;
+            margin: 5px;
+            color: #fff;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: medium;
+            border-radius: 0.25rem;
+        }
+
+        #second {
+            background: #0E0F19;
+            padding: 10px 20px;
+            border: none;
+            margin: 5px;
+            color: #fff;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: medium;
+            border-radius: 0.25rem;
+        }
+
+        .two {
+            background: #F8C7CC !important;
+            padding: 10px 20px;
+            border: none;
+            margin: 5px;
+            color: #fff;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: medium;
+            border-radius: 0.25rem;
+        }
+    </style>
+</head>
+
+<body>
+    <button>First</button>
+    <button id="second" class="two">Second</button>
+    <button class="three" id="third">Third</button>
+    <button>Fourth</button>
+    <button>Fifth</button>
+</body>
+
+</html>
